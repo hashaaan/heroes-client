@@ -3,6 +3,6 @@
 
 NIBM - 19.1 Web API Developmet - Heroes Client Application
 
-Techniogies : [React.js]
+Technologies : [React.js]
 
 This is a MERN Stack Development.
