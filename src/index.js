@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 //import App from './App';
-import Hero from "./components/Hero";
+import Heroes from "./components/Heroes";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Hero />
+    <Heroes />
   </React.StrictMode>,
   document.getElementById("root")
 );
