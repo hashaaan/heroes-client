@@ -15,6 +15,7 @@ class Hero extends Component {
             className="card-img-top"
             src={avenger.imgUrl ? avenger.imgUrl : "assets/img/hulk.jpg"}
             alt="..."
+            style={{ height: "420px" }}
           />
           <div className="card-body">
             <Link to={`/heroes/${avenger.id}`}>
@@ -23,12 +24,16 @@ class Hero extends Component {
             <h6>{avenger.birthname}</h6>
 
             <ul>{this.showMovies()}</ul>
-            <button
-              className="btn btn-primary"
-              onClick={() => this.likeAvenger(1)}
-            >
+            <button className="btn btn-primary" onClick={this.props.onLike}>
               Like{" "}
               <span className="badge badge-light">{avenger.likeCount}</span>
+            </button>
+            <button
+              style={{ marginLeft: "10px" }}
+              className="btn btn-danger"
+              onClick={this.props.onDelete}
+            >
+              Delete
             </button>
           </div>
         </div>
@@ -46,9 +51,6 @@ class Hero extends Component {
     }
     return avenger.movies.map((movie, key) => <li key={key}>{movie}</li>);
   }
-  likeAvenger = (counter) => {
-    this.setState({ likeCount: this.state.likeCount + counter });
-  };
 }
 
 export default Hero;
